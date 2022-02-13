@@ -39,6 +39,7 @@
 		background-image: url('../../dist/img/bg-pattern-mobile-nav.svg');
 		background-repeat: no-repeat;
 		background-position: bottom;
+		background-size: contain;
 		z-index: 100;
 		transform: translateY(-800px);
 		transition: transform 0.6s;
@@ -80,7 +81,7 @@
 	}
 }
 
-@media (min-width: 376px) {
+@media (min-width: 400px) {
 	.nav {
 		&__mobile {
 			background-image: none;
