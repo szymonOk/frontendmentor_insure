@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+
+.decoration {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+.decoration-left {
+	top: 350px;
+	left: -10px;
+	background-image: url('../../../dist/img/bg-pattern-intro-left-mobile.svg');
+}
+.decoration-right {
+	bottom: -510px;
+	left: 0;
+	background-position: right;
+	background-image: url('../../../dist/img/bg-pattern-intro-right-mobile.svg');
+}
+.decoration-desktop-left,
+.decoration-desktop-right {
+	display: none;
+}
+
+@media (min-width: 375px) {
+	.decoration-left {
+		top: 450px;
+	}
+}
+
+@media (min-width: 768px) {
+	.up-line {
+		height: 1.5px;
+		width: 100px;
+		background-color: $grayish-blue;
+		margin-bottom: 2em;
+	}
+
+	.decoration-left,
+	.decoration-right {
+		display: none;
+	}
+}
+
+@media (min-width: 1100px) {
+	.decoration-desktop-left,
+	.decoration-desktop-right {
+		display: block;
+	}
+
+	.decoration-desktop-left {
+		background-image: url('../../../dist/img/bg-pattern-intro-left-desktop.svg');
+		top: 350px;
+		left: 0;
+	}
+
+	.decoration-desktop-right {
+		background-image: url('../../../dist/img/bg-pattern-intro-right-desktop.svg');
+		background-position: right;
+		top: 0;
+		right: 0;
+		z-index: 1;
+	}
+}

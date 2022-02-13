@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+
+.bordered-button {
+	font-weight: 700;
+	text-transform: uppercase;
+	display: block;
+	padding: 0.8em 0.6em;
+	text-decoration: none;
+	text-align: center;
+	transition: color 0.3s, background-color 0.3s;
+}
+
+.bordered-button--light {
+	border: 2px solid $very-light-gray;
+	color: $very-light-gray;
+
+	&:hover {
+		background-color: $very-light-gray;
+		color: $very-dark-violet !important;
+	}
+}
+
+.bordered-button--dark {
+	border: 2px solid $very-dark-violet;
+	color: $very-dark-violet !important;
+
+	&:hover {
+		background-color: $very-dark-violet;
+		color: $very-light-gray !important;
+	}
+}

@@ -6,9 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insure landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5bcf0b1944.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <script src="./dist/js/main.min.js" defer></script>
 </head>
 
 <body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="nav__bar wrapper">
+
+            <a class="nav__logo" href="#">
+                <img class="nav__logo-item" src="./dist/img/logo.svg" alt="logo">
+            </a>
+
+            <div class="nav__btn">
+                <button class="nav__btn-item"><img src="./dist/img/icon-hamburger.svg" alt=""></button>
+            </div>
+
+            <div class="nav__desktop">
+                <div class="nav__list">
+                    <a href="#work">how we work</a>
+                    <a href="#blog">blog</a>
+                    <a href="#acc">account</a>
+                    <a class="bordered-button bordered-button--dark" href="#plan">view plans</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="nav__mobile">
+            <div class="nav__list wrapper">
+                <a href="#work">how we work</a>
+                <a href="#blog">blog</a>
+                <a href="#acc">account</a>
+                <a class="bordered-button bordered-button--light" href="#plan">view plans</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header__image header__image-mobile">
+            <img src="./dist/img/image-intro-mobile.jpg" alt="">
+        </div>
+
+        <div class="wrapper">
+
+            <div class="header__image header__image-desktop">
+                <img src="./dist/img/image-intro-mobile.jpg" alt="">
+            </div>
+
+            <div class="header__info">
+                <div class="up-line"></div>
+                <h1 class="header__info-title">Humanizing your insurance</h1>
+                <p class="header__info-text">Get your life insurance coverage easier and faster. We blend our expertise
+                    and technology to help you find the plan that's right for you. Ensure you
+                    and your loved ones are protected.</p>
+                <a href="#" class="header__info-btn bordered-button bordered-button--light">View plans</a>
+            </div>
+
+        </div>
+
+        <div class="decoration decoration-left"></div>
+        <div class="decoration decoration-right"></div>
+
+        <div class="decoration decoration-desktop-left"></div>
+        <div class="decoration decoration-desktop-right"></div>
+
+    </header>
 
 </body>
 

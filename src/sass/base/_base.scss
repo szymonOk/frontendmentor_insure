@@ -1,0 +1,16 @@
+body {
+	overflow-x: hidden;
+}
+
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 32px;
+}
+
+@media (min-width: 576px) {
+	.wrapper {
+		padding: 0 64px;
+	}
+}

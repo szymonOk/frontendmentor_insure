@@ -1,0 +1,101 @@
+@use '../abstracts/variables' as *;
+
+.header {
+	z-index: 0;
+	background-color: $dark-violet;
+	position: relative;
+
+	&__image {
+		width: 100%;
+
+		img {
+			width: 100%;
+			max-height: 450px;
+			object-fit: cover;
+		}
+	}
+
+	&__image-desktop {
+		display: none;
+	}
+
+	&__info {
+		padding: 5em 0;
+		color: $very-light-gray;
+		text-align: center;
+		z-index: 10;
+
+		&-title {
+			font-size: 4rem;
+			line-height: 105%;
+			margin-bottom: 0.6em;
+		}
+
+		&-text {
+			line-height: 170%;
+			margin-bottom: 1.6em;
+		}
+
+		&-btn {
+			margin: 0 auto;
+			width: 60%;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		.wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+			gap: 20px;
+		}
+
+		&__image-mobile {
+			display: none;
+		}
+
+		&__image-desktop {
+			position: relative;
+			display: block;
+			grid-row: 1/2;
+			grid-column: 2/3;
+
+			img {
+				position: absolute;
+				top: 5em;
+				max-height: 500px;
+				max-width: 400px;
+			}
+		}
+
+		&__info {
+			position: relative;
+			grid-row: 1/2;
+			grid-column: 1/2;
+			text-align: left;
+
+			&-title {
+				font-size: 5rem;
+			}
+
+			&-text {
+				font-size: 1.8rem;
+			}
+
+			&-btn {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.header {
+		&__info {
+			padding: 6em 0;
+		}
+	}
+}

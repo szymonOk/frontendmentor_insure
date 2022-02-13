@@ -1,0 +1,138 @@
+@use '../abstracts/variables' as *;
+
+.nav {
+	background-color: $very-light-gray;
+	padding: 1em 0;
+
+	&__bar {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 110;
+	}
+
+	&__logo {
+		&-item {
+			object-fit: cover;
+		}
+	}
+
+	&__btn {
+		&-item {
+			background: none;
+			border: none;
+			cursor: pointer;
+		}
+	}
+
+	&__mobile {
+		position: absolute;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 6em 0;
+		background-color: $very-dark-violet;
+		background-image: url('../../../dist/img/bg-pattern-mobile-nav.svg');
+		background-repeat: no-repeat;
+		background-position: bottom;
+		z-index: 100;
+		transform: translateY(-800px);
+		transition: transform 0.6s;
+	}
+
+	.show-nav {
+		transform: translateY(0);
+	}
+
+	&__desktop {
+		display: none;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		list-style-type: none;
+		font-size: 2.2rem;
+		text-transform: uppercase;
+		text-align: center;
+		width: 100%;
+		font-weight: 700;
+
+		a {
+			display: inline-block;
+			width: 100%;
+			margin: 0.2em 0;
+			padding: 0.8em 0;
+			text-decoration: none;
+			color: $very-light-gray;
+			transition: color 0.3s, background-color 0.3s;
+
+			&:hover {
+				color: $dark-grayish-violet;
+			}
+		}
+	}
+}
+
+@media (min-width: 376px) {
+	.nav {
+		&__mobile {
+			background-image: none;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.nav {
+		&__list {
+			a {
+				margin: 0.6em 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		&__mobile,
+		&__btn {
+			display: none;
+		}
+
+		&__desktop {
+			display: flex;
+		}
+
+		&__list {
+			flex-direction: row;
+			font-size: 1.6rem;
+
+			a {
+				width: auto;
+				margin: 0;
+				padding: 0.6em 1.2em;
+				color: $dark-grayish-violet;
+
+				&:hover {
+					color: $dark-violet;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav {
+		padding: 1.2em 0;
+
+		&__list {
+			font-size: 1.8rem;
+		}
+	}
+}
