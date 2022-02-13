@@ -10,13 +10,13 @@
 .decoration-left {
 	top: 350px;
 	left: -10px;
-	background-image: url('../../../dist/img/bg-pattern-intro-left-mobile.svg');
+	background-image: url('../../dist/img/bg-pattern-intro-left-mobile.svg');
 }
 .decoration-right {
 	bottom: -510px;
 	left: 0;
 	background-position: right;
-	background-image: url('../../../dist/img/bg-pattern-intro-right-mobile.svg');
+	background-image: url('../../dist/img/bg-pattern-intro-right-mobile.svg');
 }
 .decoration-desktop-left,
 .decoration-desktop-right {
@@ -50,13 +50,13 @@
 	}
 
 	.decoration-desktop-left {
-		background-image: url('../../../dist/img/bg-pattern-intro-left-desktop.svg');
+		background-image: url('../../dist/img/bg-pattern-intro-left-desktop.svg');
 		top: 350px;
 		left: 0;
 	}
 
 	.decoration-desktop-right {
-		background-image: url('../../../dist/img/bg-pattern-intro-right-desktop.svg');
+		background-image: url('../../dist/img/bg-pattern-intro-right-desktop.svg');
 		background-position: right;
 		top: 0;
 		right: 0;
