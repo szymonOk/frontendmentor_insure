@@ -1,3 +1,5 @@
+@use '../base/breakpoints' as *;
+
 body {
 	overflow-x: hidden;
 }
@@ -7,10 +9,8 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 32px;
-}
 
-@media (min-width: 576px) {
-	.wrapper {
+	@include md {
 		padding: 0 64px;
 	}
 }
