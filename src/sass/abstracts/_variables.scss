@@ -1,8 +1,7 @@
-// colors
-$dark-violet: hsl(256, 26%, 20%);
-$grayish-blue: hsl(216, 30%, 68%);
-$very-dark-violet: hsl(270, 9%, 17%);
-$dark-grayish-violet: hsl(273, 4%, 51%);
-$very-light-gray: hsl(0, 0%, 98%);
-
-// fonts
+$colors: (
+	'main-color': #2d2640,
+	'almost-blue': #95a9c6,
+	'hover-color': #837d87,
+	'bg-color': #fafafa,
+	'second-bg-color': #2b272f,
+);

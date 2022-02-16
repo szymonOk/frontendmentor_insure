@@ -1,101 +1,113 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+@use '../base/breakpoints' as *;
 
 .header {
-	z-index: 0;
-	background-color: $dark-violet;
 	position: relative;
+	background-color: color(main-color);
+	z-index: 0;
+	padding-top: 68px;
 
-	&__image {
+	@include md {
+		padding-top: 72.8px;
+	}
+
+	@include lg {
+		padding-top: 84.8px;
+	}
+
+	.wrapper {
+		@include md {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+		}
+	}
+
+	&__image-mobile,
+	&__image-desktop {
 		width: 100%;
+	}
 
+	&__image-mobile {
 		img {
 			width: 100%;
 			max-height: 450px;
 			object-fit: cover;
 		}
+
+		@include md {
+			display: none;
+		}
 	}
 
 	&__image-desktop {
 		display: none;
+
+		@include md {
+			position: relative;
+			display: block;
+			grid-row: 1/2;
+			grid-column: 2/3;
+		}
+
+		img {
+			@include md {
+				position: absolute;
+				top: 5em;
+				right: 0;
+				width: 100%;
+				padding-left: 2em;
+			}
+		}
 	}
 
 	&__info {
 		padding: 5em 0;
-		color: $very-light-gray;
+		color: color(bg-color);
 		text-align: center;
 		z-index: 10;
+
+		@include md {
+			position: relative;
+			padding-right: 2em;
+			grid-row: 1/2;
+			grid-column: 1/2;
+			text-align: left;
+		}
+
+		@include xl {
+			padding: 6em 0;
+		}
 
 		&-title {
 			font-size: 4rem;
 			line-height: 105%;
 			margin-bottom: 0.6em;
+
+			@include md {
+				font-size: 5.2rem;
+			}
 		}
 
 		&-text {
 			line-height: 170%;
 			margin-bottom: 1.6em;
+
+			@include md {
+				font-size: 2rem;
+			}
 		}
 
-		&-btn {
+		.bordered-button-light {
 			margin: 0 auto;
 			width: 60%;
 			letter-spacing: 2px;
-		}
-	}
-}
 
-@media (min-width: 768px) {
-	.header {
-		.wrapper {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr;
-			gap: 20px;
-		}
-
-		&__image-mobile {
-			display: none;
-		}
-
-		&__image-desktop {
-			position: relative;
-			display: block;
-			grid-row: 1/2;
-			grid-column: 2/3;
-
-			img {
-				position: absolute;
-				top: 5em;
-				max-height: 500px;
-				max-width: 400px;
-			}
-		}
-
-		&__info {
-			position: relative;
-			grid-row: 1/2;
-			grid-column: 1/2;
-			text-align: left;
-
-			&-title {
-				font-size: 5rem;
-			}
-
-			&-text {
-				font-size: 1.8rem;
-			}
-
-			&-btn {
+			@include md {
 				margin: 0;
+				width: 40%;
 			}
-		}
-	}
-}
-
-@media (min-width: 1100px) {
-	.header {
-		&__info {
-			padding: 6em 0;
 		}
 	}
 }

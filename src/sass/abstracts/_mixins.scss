@@ -1,0 +1,25 @@
+@use '../abstracts/functions' as *;
+
+@mixin flexCenter($direction: row) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin buttonTheme($first, $second) {
+	font-weight: 700;
+	text-transform: uppercase;
+	display: block;
+	padding: 0.8em 0.6em;
+	text-decoration: none;
+	text-align: center;
+	transition: color 0.3s, background-color 0.3s;
+	border: 2px solid color($first);
+	color: color($first);
+
+	&:hover {
+		background-color: color($first);
+		color: color($second);
+	}
+}

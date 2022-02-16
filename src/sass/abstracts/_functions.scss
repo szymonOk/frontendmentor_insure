@@ -1,0 +1,5 @@
+@use '../abstracts/variables' as *;
+
+@function color($color) {
+	@return map-get($colors, $color);
+}
