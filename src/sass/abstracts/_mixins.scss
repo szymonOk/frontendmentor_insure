@@ -23,3 +23,10 @@
 		color: color($second);
 	}
 }
+
+@mixin upLine($color) {
+	height: 1.5px;
+	width: 100px;
+	background-color: color($color);
+	margin-bottom: 2em;
+}

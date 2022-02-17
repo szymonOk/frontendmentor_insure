@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
 @use '../base/breakpoints' as *;
 
 .header {
@@ -80,6 +81,12 @@
 			padding: 6em 0;
 		}
 
+		.up-line {
+			@include md {
+				@include upLine(bg-color);
+			}
+		}
+
 		&-title {
 			font-size: 4rem;
 			line-height: 105%;
@@ -106,6 +113,9 @@
 
 			@include md {
 				margin: 0;
+			}
+
+			@include lg {
 				width: 40%;
 			}
 		}

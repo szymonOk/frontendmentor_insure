@@ -2,16 +2,6 @@
 @use '../abstracts/functions' as *;
 @use '../base/breakpoints' as *;
 
-// line
-.up-line {
-	@include md {
-		height: 1.5px;
-		width: 100px;
-		background-color: color(bg-color);
-		margin-bottom: 2em;
-	}
-}
-
 // line shapes
 %decoration {
 	position: absolute;
