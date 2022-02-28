@@ -3,30 +3,10 @@
 @use '../base/breakpoints' as *;
 
 .about {
-	position: relative;
-	text-align: center;
-	margin: 7em 0;
-	z-index: 1;
-
-	@include breakpoint(1100px) {
-		margin: 12em 0 8em;
-	}
-
 	.up-line {
 		margin: 0 auto;
 		@include upLine(main-color);
 		width: 150px;
-	}
-
-	&__title {
-		font-size: 4rem;
-		font-weight: 400;
-		margin-bottom: 1.6em;
-		color: color(main-color);
-
-		@include md {
-			font-size: 5rem;
-		}
 	}
 
 	&__cards {

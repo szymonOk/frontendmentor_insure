@@ -1,0 +1,49 @@
+@use '../abstracts/functions' as *;
+@use '../base/breakpoints' as *;
+@use '../abstracts/mixins' as *;
+
+.work {
+	&__box {
+		position: relative;
+		padding: 4em 1em;
+		background-color: color(main-color);
+		z-index: 0;
+		overflow: hidden;
+
+		@include breakpoint('1100px') {
+			@include flexCenter;
+			justify-content: space-between;
+			padding: 4em 2.6em;
+		}
+	}
+
+	.section-title {
+		color: color(bg-color);
+
+		@include breakpoint('1100px') {
+			margin: 0;
+			width: 50%;
+			text-align: left;
+		}
+	}
+
+	.bordered-button-light {
+		margin: 0 auto;
+		width: 80%;
+		z-index: 10;
+
+		@include sm {
+			width: 40%;
+		}
+
+		@include breakpoint('1100px') {
+			margin: 0;
+			width: 20%;
+			font-size: 2rem;
+		}
+	}
+
+	.decoration-right {
+		top: -100px;
+	}
+}

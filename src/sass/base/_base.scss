@@ -1,4 +1,5 @@
 @use '../base/breakpoints' as *;
+@use '../abstracts/functions' as *;
 
 body {
 	overflow-x: hidden;
@@ -12,5 +13,28 @@ body {
 
 	@include md {
 		padding: 0 64px;
+	}
+}
+
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	margin-bottom: 1.4em;
+	color: color(main-color);
+	line-height: 105%;
+
+	@include md {
+		font-size: 5rem;
+	}
+}
+
+.section-padding {
+	position: relative;
+	text-align: center;
+	margin: 7em 0;
+	z-index: 1;
+
+	@include breakpoint(1100px) {
+		margin: 12em 0 8em;
 	}
 }
