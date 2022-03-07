@@ -22,12 +22,6 @@
 		z-index: 1;
 	}
 
-	&__logo {
-		&-item {
-			object-fit: cover;
-		}
-	}
-
 	&__btn {
 		@include md {
 			display: none;

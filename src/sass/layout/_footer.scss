@@ -1,0 +1,118 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+@use '../base/breakpoints' as *;
+
+.footer {
+	position: relative;
+	padding: 4em 0;
+	background-color: color(bg-color);
+	z-index: 0;
+
+	a {
+		text-decoration: none;
+		padding: 0.5em;
+		@include lg {
+			padding: 0.7em;
+		}
+	}
+
+	.wrapper {
+		margin: 0 auto;
+		text-align: center;
+		@include flexCenter(column);
+	}
+
+	&__top {
+		@include flexCenter(column);
+		margin-bottom: 2em;
+
+		.logo {
+			margin-bottom: 2em;
+
+			@include lg {
+				margin: 0;
+				padding-left: 0;
+			}
+		}
+
+		@include lg {
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	&__social {
+		a {
+			opacity: 0.8;
+			transition: opacity 0.3s;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.up-line {
+		@include upLine(hover-color);
+		height: 0.8px;
+		width: 100%;
+		opacity: 0.5;
+	}
+
+	&__bottom {
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 2px;
+
+		@include lg {
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		&-nav {
+			@include flexCenter(column);
+
+			@include lg {
+				align-items: flex-start;
+			}
+
+			p {
+				color: color(hover-color);
+				margin: 1.8em 0;
+				font-size: 1.7rem;
+			}
+
+			a {
+				position: relative;
+				color: color(main-color);
+				font-size: 1.5rem;
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 4px;
+					height: 1.4px;
+					width: 100%;
+					background-color: color(main-color);
+					transform: scale(0);
+					transform-origin: left;
+					transition: 0.5s;
+					opacity: 0;
+				}
+
+				&:hover::before {
+					transform: scale(1);
+					opacity: 1;
+				}
+
+				@include lg {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}

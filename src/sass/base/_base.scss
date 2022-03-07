@@ -5,6 +5,12 @@ body {
 	overflow-x: hidden;
 }
 
+.logo {
+	&-item {
+		object-fit: cover;
+	}
+}
+
 .wrapper {
 	max-width: 1200px;
 	width: 100%;
